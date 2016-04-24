@@ -1,0 +1,68 @@
+head 
+  // Question: Why using `include` will move statements to <body> automatically? 
+  link(rel="stylesheet", href="/stylesheets/css/bootstrapSuperhero.css")
+  link(rel="stylesheet", href="/stylesheets/css/font-awesome.css")
+  link(rel="stylesheet", href="/stylesheets/css/animate.css")
+  link(rel="stylesheet", href="/stylesheets/css/main.css")
+  link(rel="stylesheet", href="/stylesheets/css/yourTrip.css")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css")  
+  
+  script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js")
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+  script(src="/javascripts/controllers/yourTripController.js")
+
+body
+  include yourtrip.html
+  
+  script(src="/javascripts/external/classie.js")
+  script(src="/javascripts/external/cbpAnimatedHeader.js")
+  script(src="/javascripts/external/jquery.easing.1.3.js")
+  script(src="/javascripts/external/jquery.stellar.js")    
+    
+  style.
+      #map {
+        height: 100%;
+      }  
+  // inline JS code directly by using "script." tag
+  script.
+    function initMap() {
+      // Go to YellowStone NP!!
+      var geocoder = new google.maps.Geocoder();
+      var address = "Yellow Stone";
+      var location = {};
+      geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK)
+        {
+            // do something with the geocoded result
+            //
+            location.lat = results[0].geometry.location.lat();
+            location.lng = results[0].geometry.location.lng();
+                              
+            console.log("Location loaded successfully");
+
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: location,
+              scrollwheel: false,
+              zoom: 10   // zoom level
+            });
+
+            // Create a marker and set its position.
+            var marker = new google.maps.Marker({
+              map: map,
+              position: location,
+              title: 'Hello World!'
+            });
+                     
+                               
+            var ctaLayer = new google.maps.KmlLayer({
+              url: 'https://sites.google.com/site/junlinyi/yellow-stone.kml',
+              map: map
+            });                      
+        }
+      });    
+    }
+    
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl9UdtC2Qqws7hBTfIUOks7-Z6-Xjbz8k&callback=initMap")

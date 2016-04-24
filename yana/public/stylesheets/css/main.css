@@ -1,0 +1,211 @@
+body {
+  font-family: "Open Sans", monospace;
+}
+
+.navbar {
+	margin-bottom: 0px;
+	padding: 15px 15px;
+	transition: all 0.5s;
+}
+
+.cbp-af-header-shrink {
+	padding: 5px 15px;
+	opacity: 0.75;
+}
+
+.fixed-attachment {
+	background-attachment: fixed;
+}
+
+.fill-screen {
+	/*
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	*/
+  	background-size: 100% 100%;
+}
+
+.logo {
+	display: inline-block;
+	position: absolute;
+	padding: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.input-group {
+	display: inline-block;
+	position: absolute;
+	padding: 10px;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 20%;
+	height: 10%;
+	min-height: 80px;
+	min-width: 120px;
+}
+
+.input-group .form-control {
+	height: 100%;
+    width: 90%;
+    font-size: 30px;
+    display: inline-block;
+    max-width: 300px;
+}
+
+.input-group .input-group-btn {
+	height: 100%;
+    width: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.input-group .input-group-btn .btn {
+	height: 100%;
+	font-size: 25px;
+}
+
+.down-button {
+	position: absolute;
+	bottom: 40px;
+	width: 100%;
+	text-align: center;
+}
+
+.down-button i {
+	color: #FFFFFF;
+	opacity: 0.7;
+}
+
+.down-button i:hover {
+	opacity: 1;
+}
+
+.fill-screen.first-img {
+	background-image: url(/images/Sakura.jpg);
+	opacity: 0.75;
+}
+
+.fill-screen.second-img {
+	background-image: url(/images/HurricaneRage.jpg);
+}
+
+.fill-screen.forth-img {
+	background-image: url(/images/Alpaca.jpg);
+}
+
+.text-banner {
+	text-align: center;
+	margin: 40px 20px;
+}
+
+.text-banner h1 {
+	font-size: 44px;
+}
+
+.text-banner p {
+	font-size: 18px;
+}
+
+.activity-section {
+	margin: 50px;
+}
+
+.activity img {
+	display: block;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+}
+
+.seeAllCity {
+	margin: 0 auto;
+    height: 40px;
+    width: 24%;
+    font-size: 20px;
+    display: block;
+}
+
+.contact-us {
+	margin: 0 50px;
+	text-align: center;
+}
+
+.figure img {
+	display: block;
+	width: 160px;
+	height: 160px;
+	margin: 20% auto 0;
+}
+
+.figure .city {
+	display: block;
+	width: 88%;
+	height: 66%;
+	margin: 10% auto;
+}
+
+.figure figcaption {
+	display: block;
+	width: 70%;
+	margin: 0 auto;
+	font-size: 20px;
+	font-weight: 900;
+	color: #000000;
+}
+
+#destinations h1 {
+	display: block;
+	margin: 0 auto;
+    padding: 50px 0 30px;
+	width: 30%;
+	text-align: center;
+}
+
+#destinations p {
+	display: block;
+    margin: 5px auto;
+    width: 40%;
+    text-align: center;
+    font-size: 22px;
+}
+
+#aboutus h1 {
+	display: block;
+	margin: 0 auto;
+    padding: 50px 0 30px;
+	width: 30%;
+	text-align: center;
+}
+
+#aboutus p {
+	display: block;
+    margin: 5px auto;
+    width: 40%;
+    text-align: center;
+    font-size: 22px;
+}
+
+.figure figcaption .lable {
+	display: block;
+}
+
+#carousel {
+	margin: 40px 0;
+}
+
+#carousel img {
+	margin: 0 auto;
+	width: 800px;
+	height: 600px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.1);
+  color: #DDD;
+  text-align: center;
+}
