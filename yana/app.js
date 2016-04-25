@@ -33,8 +33,8 @@ app.use('/', routes);
 app.use('/users', users);
 
 // trip planner specific routes
-app.put('/trips/propose', trips.propose);
-app.get('/trips/propose', trips.propose);
+app.put('/trips/maps', trips.maps);
+app.get('/trips/maps', trips.maps);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
